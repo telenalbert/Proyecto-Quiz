@@ -1,0 +1,233 @@
+.contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0; 
+    background-color: #f2f2f2;
+}
+
+.hide {
+    display: none !important;
+}
+
+#home {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+    font-family: Montserrat, sans-serif;
+    width: 1000px;
+    height: 450px;
+    translate: -6px -6px;
+    background: #ff66a3;
+    border: 3px solid #000000;
+    box-shadow: 12px 12px 0 #000000;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    align-items: stretch; 
+    justify-items: stretch; 
+}
+    
+.bienvenida {
+    grid-column: span 4 / span 4;
+    grid-row: span 3 / span 3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* izquierda */
+    justify-content: flex-start; /* arriba */
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.bienvenida h2 {
+    padding: 8px 12px;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.bienvenida h1 {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 900;
+    width: 100%;
+    height: 32px;
+    background: #ffffff;
+    padding: 5px 12px;
+    color: #000000;
+    border-bottom: 3px solid #000000;
+}
+
+.comienzo {
+    grid-column: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 4;
+    display: flex;
+    justify-content: center;
+}
+
+
+.comienzo button {
+    padding: 5px 10px;
+    margin-top: 10px;
+    border: 3px solid #000000;
+    box-shadow: 3px 3px 0 #000000;
+    font-weight: 750;
+    background: #4ade80;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 200px;
+}
+
+.comienzo button:hover {
+  translate: 1.5px 1.5px;
+  box-shadow: 1.5px 1.5px 0 #000000;
+  background: #1ac2ff;
+}
+ 
+.comienzo button:active {
+  translate: 3px 3px;
+  box-shadow: 0 0 0 #000000;
+}
+
+#home:hover {
+  translate: -6px !important; 
+}
+
+.box-preguntas {
+    display: grid;
+    grid-template-rows: auto 1fr 1fr 1fr 1fr;
+    gap: 8px;
+    font-family: Montserrat, sans-serif;
+    width: 1200px;
+    height: 450px;
+    translate: -6px -6px;
+    background: #ff66a3;
+    border: 3px solid #000000;
+    box-shadow: 12px 12px 0 #000000;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    align-items: stretch; 
+    justify-items: stretch; 
+    position: relative;
+}
+
+.box-preguntas h1 {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 900;
+    width: 100%;
+    height: 32px;
+    background: #ffffff;
+    padding: 5px 12px;
+    color: #000000;
+    border-bottom: 3px solid #000000;
+}
+
+.pregunta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: 16px;
+  line-height: 1.2;
+  max-height: 100px;
+  overflow-y: auto;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  grid-column: 1 / -1; /* Que ocupe toda la fila */
+  padding: 8px 12px;
+  margin: 5px;
+  background: #fff;
+  border-bottom: 3px solid #000;
+  font-weight: 800;
+}
+
+.alt1 {
+    grid-column-start: 2;
+    grid-row-start: 3;
+      
+}
+
+.alt2 {
+    grid-column-start: 3;
+    grid-row-start: 3;
+}
+
+.alt3 {
+    grid-column-start: 2;
+    grid-row-start: 4;
+    
+}
+
+.alt4 {
+    grid-column-start: 3;
+    grid-row-start: 4;
+    
+}
+
+.box-preguntas button {
+    padding: 5px 10px;
+    margin-top: 10px;
+    border: 3px solid #000000;
+    box-shadow: 3px 3px 0 #000000;
+    font-weight: 750;
+    background: #4ade80;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 400px;
+    height: 150px;
+
+}
+
+.box-preguntas button:hover {
+    translate: 1.5px 1.5px;
+    box-shadow: 1.5px 1.5px 0 #000000;
+    background: #1ac2ff;
+}
+
+.box-preguntas button:active {
+    translate: 3px 3px;
+    box-shadow: 0 0 0 #000000;
+}
+
+.box-preguntas:hover {
+    translate: -6px;
+}
+
+.continuar, .volver {
+    position: absolute;  /* Los posicionamos dentro de la card */
+    bottom: 15px; /* Distancia desde la parte inferior */
+    padding: 5px 10px;
+    margin-top: 10px;
+    border: 3px solid #000000;
+    box-shadow: 3px 3px 0 #000000;
+    font-weight: 750;
+    background: #4ade80;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+}
+
+/* botón volver pa la izq */
+.volver {
+    left: 15px;
+}
+
+/* botón siguiente a la der */
+.continuar {
+    right: 15px;
+}
+
+.continuar:hover, .volver:hover {
+    translate: 1.5px 1.5px;
+    box-shadow: 1.5px 1.5px 0 #000000;
+    background: #1ac2ff;
+}
+
+
+.continuar:active, .volver:active {
+    translate: 3px 3px;
+    box-shadow: 0 0 0 #000000;
+}
