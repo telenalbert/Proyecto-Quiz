@@ -9,19 +9,19 @@
 </head>
 <body>
     <nav id="nav">
-        <button> Home </button>
+        <button class="boton-nav" id="boton-home">Home</button>
     </nav>
     <main class="contenido">
-    <article id="home" class="hide">
+    <article id="home" >
         <div class="bienvenida">
             <h1>QUIZ</h1>
             <h2>Bienvenidos</h2>
         </div>
         <div class="comienzo">
-            <button type="submit">Comenzar</button>
+            <button type="submit" id="comienzo">Comenzar</button>
         </div>
     </article>
-    <article id="quiz" >
+    <article id="quiz" class="hide">
         <div class="box-preguntas">
             <div class="pregunta">
                 <h1>ENUNCIADO </h1>
@@ -32,9 +32,14 @@
             <button class="alt4">5</button>
         </div>
         <div>
-            <button class="volver">Atrás</button>
-            <button class="continuar">Siguiente</button>
+            <button class="volver" id="volver">Atrás</button>
+            <button class="continuar" id="continuar">Siguiente</button>
         </div>
+    </article>
+    <article id="final" class="hide">
+        <h1 class="titulo">Resultados!</h1>
+        <h2 class="resultados">Aquí tu resultado</h2>
+        <button class="reinicio" id="reinicio">Volver a Comenzar</button>
     </article>
     </main>
     <script src="main.js"></script>
