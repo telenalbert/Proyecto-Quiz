@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Quiz</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/5b722e19df.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <nav id="nav">
@@ -24,12 +24,12 @@
     <article id="quiz" class="hide">
         <div class="box-preguntas">
             <div class="pregunta">
-                <h1>ENUNCIADO </h1>
+                <h1 id="enunciado">ENUNCIADO </h1>
             </div>
-            <button class="alt1">2</button>
-            <button class="alt2">3</button>
-            <button class="alt3">4</button>
-            <button class="alt4">5</button>
+            <button class="alt1" id="correcta">2</button>
+            <button class="alt2" id="incorrecta">3</button>
+            <button class="alt3" id="incorrecta2">4</button>
+            <button class="alt4" id="incorrecta3">5</button>
         </div>
         <div>
             <button class="volver" id="volver">Atrás</button>

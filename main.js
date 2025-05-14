@@ -30,6 +30,42 @@ function soloFinal () {
     final.classList.remove("hide")
 }
 
+/*
+function esconder () {
+    home.classList.add("hide")
+    nav.classList.add("hide")
+    quiz.classList.add("hide")
+    final.classList.add("hide")
+}
+*/
+
 botonComienzo.addEventListener("click",soloQuiz)
 botonHome.addEventListener("click",soloHome)
-//botonComienzo.addEventListener("click",soloQuiz)
+botonSiguiente.addEventListener("click", soloFinal)
+botonVolveraComenzar.addEventListener("click",soloHome)
+
+//let preguntaActual;
+
+let preguntasApi;
+
+axios.get(urlApi)
+     .then((res) => {preguntasApi = res.data; console.log(preguntasApi)})
+     .catch((err) => console.error(err))
+
+function pintaPregunta (nodo) {
+    document.getElementById("correcta").innerText    = nodo.correct_answer
+    document.getElementById("enunciado").innerText   = nodo.question
+    document.getElementById("incorrecta").innerText  = nodo.incorrect_answers [ 0 ]
+    document.getElementById("incorrecta2").innerText = nodo.incorrect_answers [ 1 ]
+    document.getElementById("incorrecta3").innerText = nodo.incorrect_answers [ 2 ]
+ }
+
+
+
+
+
+//document.getElementById("correcta").innerText=nodo.correct_answer
+//document.getElementById("enunciado").innerText=nodo.question
+//document.getElementById("incorrecta").innerText=nodo.incorrect_answers
+//document.getElementById("incorrecta2").innerText=nodo.incorrect_answers
+//document.getElementById("incorrecta3").innerText=preguntasApi.results[2].incorrect_answers
