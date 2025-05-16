@@ -32,6 +32,9 @@ function soloFinal  ( ) {
     esconder ( )
     nav.classList.remove ( "hide" )
     final.classList.remove ( "hide" )
+    resultados.innerHTML = `Tuviste ${respuestasCorrectas} respuesta(s) correcta de ${preguntasApi.length} preguntas!` 
+    respuestasCorrectas = 0;
+    preguntaActiva      = 0;
 }   //  soloFinal
 
 function esconder  ( ) {
@@ -46,7 +49,7 @@ function esconder  ( ) {
 function randomIntFromInterval ( min, max ) 
 {
     return Math.floor ( Math.random ( ) * ( max - min + 1 ) + min );
-}
+}   //  randomIntFromInterval
 
 function encontrar (arr, num)
 {
@@ -58,7 +61,7 @@ function encontrar (arr, num)
         }
     }
     return false
-}
+}   //  encontrar
 
 function llenarArreglo () 
 {
@@ -75,7 +78,7 @@ function llenarArreglo ()
         }
     }
     return (arreglo)
-}
+}   //llenarArreglo
 
 function ConvierteArreglo  (  listaInicial  )
 {
@@ -142,7 +145,6 @@ function pintaPregunta  ( nodo )
     else 
     {
         soloFinal()
-        resultados.innerHTML = `Tuviste ${respuestasCorrectas} respuesta correcta de ${preguntasApi.length} preguntas!` 
     }
     colorInicial ( );
  } //   siguientePregunta
@@ -183,8 +185,6 @@ const alternativa =  ( event ) =>
 
 }   // alternativa
 
-
-//pintar la respuesta verde o rojo si es la correcta o no
 
 botonComienzo.addEventListener ( "click",soloQuiz )
 botonHome.addEventListener ( "click",soloHome )
